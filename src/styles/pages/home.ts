@@ -17,7 +17,8 @@ export const HomeContainer = styled.main`
 `;
 
 export const ProductContainer = styled.div`
-  width: 100%;
+  width: 218px;
+  height: 285x;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,13 +34,14 @@ export const ProductContainer = styled.div`
   }
 
   span {
-    font-size: 0.85rem;
+    font-size: 10px;
     color: ${(props) => props.theme.colors.gray100};
     padding: 0 1rem;
   }
 
   button {
-    width: 100%;
+    width: 218px;
+    height: 31.91px;
     background-color: ${(props) => props.theme.colors.blue};
     color: ${(props) => props.theme.colors.white};
     font-weight: 600;
@@ -62,20 +64,20 @@ export const ProductContainer = styled.div`
 export const DescriptionContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 55% 45%;
   gap: 0.35rem;
   padding: 0 1rem;
 
-  strong {
-    font-size: 1rem;
+  p {
+    font-size: 16px;
     color: ${(props) => props.theme.colors.gray100};
-    font-weight: 550;
+    font-weight: 400;
   }
 
   span {
     width: 100%;
     background-color: ${(props) => props.theme.colors.gray200};
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 0.25rem;
     font-size: 0.8rem;
     color: ${(props) => props.theme.colors.white};

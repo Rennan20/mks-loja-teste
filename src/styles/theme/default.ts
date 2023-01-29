@@ -8,9 +8,10 @@ export const defaultTheme = {
     gray200: "#373737",
   },
   fontSize: {
-    md: "10px",
-    lg: "10px",
+    md: "5px",
+    lg: "8px",
     xl: "14px",
-    "2xl": "1.75rem",
+    "2xl": "28px",
+    footer: "12px",
   },
 } as const;

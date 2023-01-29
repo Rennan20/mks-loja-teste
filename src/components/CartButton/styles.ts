@@ -15,7 +15,7 @@ export const ButtonContainer = styled.div`
 
   strong {
     color: ${(props) => props.theme.colors.white};
-    font-size: ${(props) => props.theme.fontSize.xl};
+    font-size: 14px;
     font-weight: 600;
   }
 

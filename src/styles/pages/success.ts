@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SucessContainer = styled.main`
+export const SuccessContainer = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@ export const SucessContainer = styled.main`
     display: block;
     margin-top: 5rem;
     color: ${({ theme }) => theme.colors.blue};
-    font-size: ${({ theme }) => theme.fontSize.lg};
+    font-size: ${({ theme }) => theme.fontSize.xl};
     text-decoration: none;
     font-weight: bold;
   }
@@ -42,18 +42,23 @@ export const ImagesContainer = styled.section`
 `;
 
 export const ImageContainer = styled.div`
-  width: 100%;
-  max-width: 140px;
-  height: 130px;
+  width: 250%;
+  max-width: 180px;
+  height: 140px;
   background: ${({ theme }) => theme.colors.white};
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.35);
   img {
     object-fit: contain;
-    padding: 1rem;
+    padding: 0.75rem;
+  }
+
+  p {
+    position: relative;
+    font-size: 12px;
   }
 `;

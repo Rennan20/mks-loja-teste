@@ -41,24 +41,22 @@ export function Cart() {
       <Dialog.Portal>
         <CartContent>
           <CartClose>
-            <X size="24" weight="bold" />
+            <X size="28" />
           </CartClose>
           <h2>
             Carrinho <br />
-            de Compras
+            de compras
           </h2>
           <section>
             {cartItemsQuantity <= 0 && (
-              <p className="texto">Seu carrinho ainda está vazio </p>
+              <p className="texto">Seu carrinho ainda está vazio! </p>
             )}
             {cartItems.map((cartItem) => (
               <CartProduct key={cartItem.id}>
-                <Image width={180} height={93} src={cartItem.photo} alt="" />
-                <span>
-                  {cartItem.brand} {cartItem.name}
-                </span>
+                <Image width={56} height={60} src={cartItem.photo} alt="" />
+                <span>{cartItem.name}</span>
                 <ContainerQuantity>
-                  <p>QTD:</p>
+                  <p>Qtd:</p>
                   <ButtonsContainer>
                     <button
                       onClick={() =>
@@ -66,7 +64,7 @@ export function Cart() {
                       }
                       disabled={cartItem.quantity <= 1}
                     >
-                      <Minus size={15} weight="fill" />
+                      <Minus size={12} weight="fill" />
                     </button>
                     <span>{cartItem.quantity}</span>
                     <button
@@ -96,7 +94,7 @@ export function Cart() {
               <p>{formatCurrency(cartTotal)}</p>
             </FinalizationDetails>
             <button disabled={cartItemsQuantity <= 0}>
-              <Link href="sucess">Finalizar Compra</Link>
+              <Link href="success">Finalizar Compra</Link>
             </button>
           </CartFinalization>
         </CartContent>

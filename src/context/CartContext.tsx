@@ -43,7 +43,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     }
     return [];
   });
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     localStorage.setItem(PRODUCTS_STORAGE_KEY, JSON.stringify(cartItems));

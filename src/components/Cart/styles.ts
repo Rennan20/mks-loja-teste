@@ -31,9 +31,14 @@ export const CartContent = styled(Dialog.Content)`
     flex: 1;
     .texto {
       color: ${({ theme }) => theme.colors.white};
+      font-size: ${({ theme }) => theme.fontSize.xl};
     }
     div:first-child {
       margin-top: 2rem;
+    }
+
+    p {
+      font-size: ${({ theme }) => theme.fontSize.md};
     }
   }
   @media (max-width: 992px) {
@@ -60,8 +65,8 @@ export const CartClose = styled(Dialog.Close)`
 `;
 
 export const CartButtonContainer = styled.button`
-  width: fit-content;
-  padding: 1rem 1.5rem;
+  width: 90px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,8 +98,8 @@ export const CartButtonContainer = styled.button`
 `;
 
 export const CartProduct = styled.div`
-  width: 100%;
-  height: fit-content;
+  width: 379px;
+  height: 95px;
   background-color: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   padding: 1rem;
@@ -116,7 +121,7 @@ export const CartProduct = styled.div`
 
   span {
     color: ${(props) => props.theme.colors.black};
-    font-size: 0.85rem;
+    font-size: 13px;
     font-weight: 400;
   }
 
@@ -160,11 +165,11 @@ export const ButtonsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid ${(props) => props.theme.colors.gray};
-  border-radius: 8px;
+  border-radius: 4px;
 
   button {
     width: 100%;
-    border: 1px solid ${(props) => props.theme.colors.gray};
+    border: hidden;
     padding: 0.5rem;
     display: flex;
     justify-content: center;
@@ -210,6 +215,14 @@ export const CartFinalization = styled.div`
       text-decoration: none;
       color: ${({ theme }) => theme.colors.white};
     }
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  p {
+    font-weight: bold;
   }
 `;
 

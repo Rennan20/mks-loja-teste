@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   ImageContainer,
   ImagesContainer,
-  SucessContainer,
+  SuccessContainer,
 } from "../src/styles/pages/success";
 import Image from "next/image";
 import Head from "next/head";
@@ -17,28 +17,31 @@ export default function Sucess() {
         <title>Compra efetuada | MKS Shop</title>
         <meta name="robots" content="noindex" />
       </Head>
-      <SucessContainer>
+      <SuccessContainer>
         <ImagesContainer>
           {cartItems.map((product) => (
             <ImageContainer key={product.id}>
               <Image
                 src={product.photo}
-                width={120}
-                height={110}
+                width={110}
+                height={100}
                 alt=""
               ></Image>
+              <p>{product.name}</p>
             </ImageContainer>
           ))}
         </ImagesContainer>
+
         <h1>Compra efetuada</h1>
         <p>
-          Sua compra de{""} {totalproductsInCart} produtos já está a caminho da
-          sua casa.
+          {totalproductsInCart === 1
+            ? `Seu produto já está à caminho da sua casa!`
+            : `Sua compra de ${totalproductsInCart} produtos já está à caminho da sua casa!`}
         </p>
         <Link href="/" onClick={() => clearCart()}>
-          Voltar ao Catálogo
+          Volte ao Catálogo, continue comprando
         </Link>
-      </SucessContainer>
+      </SuccessContainer>
     </>
   );
 }

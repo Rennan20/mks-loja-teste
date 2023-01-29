@@ -7,7 +7,7 @@ export const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.colors.gray};
 
   span {
-    font-size: ${(props) => props.theme.fontSize.lg};
+    font-size: ${(props) => props.theme.fontSize.footer};
     color: ${(props) => props.theme.colors.black};
   }
 `;

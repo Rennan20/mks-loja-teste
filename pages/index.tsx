@@ -30,11 +30,9 @@ export default function Home({ products }: HomeProps) {
       <HomeContainer>
         {products.map((product: IProduct) => (
           <ProductContainer key={product.id}>
-            <Image src={product.photo} width={180} height={93} alt="" />
+            <Image src={product.photo} width={140} height={80} alt="" />
             <DescriptionContainer>
-              <strong>
-                {product.brand} {product.name}
-              </strong>
+              <p>{product.name}</p>
               <span>{formatCurrency(product.price)}</span>
             </DescriptionContainer>
             <span>{product.description}</span>
@@ -43,7 +41,7 @@ export default function Home({ products }: HomeProps) {
               onClick={() => addProductToCart(product)}
             >
               {checkIfProductAlreadyInCart(product.id) ? (
-                "O produto já está na sacola"
+                "O produto já está no carrinho"
               ) : (
                 <CartButton />
               )}
