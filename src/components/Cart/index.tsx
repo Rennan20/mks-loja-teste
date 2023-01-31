@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import React from "react";
 import {
   CartClose,
   CartContent,
@@ -13,7 +14,7 @@ import { Minus, Plus, ShoppingCart, X } from "phosphor-react";
 import Image from "next/image";
 import { useCart } from "../../hooks/useCart";
 import Link from "next/link";
-import "src/context/CartContext.tsx";
+import "../../context/CartContext";
 
 export function Cart() {
   const {
@@ -94,7 +95,9 @@ export function Cart() {
               <p>{formatCurrency(cartTotal)}</p>
             </FinalizationDetails>
             <button disabled={cartItemsQuantity <= 0}>
-              <Link href="success">Finalizar Compra</Link>
+              {cartItemsQuantity > 0 && (
+                <Link href="success">Finalizar Compra</Link>
+              )}
             </button>
           </CartFinalization>
         </CartContent>

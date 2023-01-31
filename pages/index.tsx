@@ -1,3 +1,4 @@
+import React from "react";
 import { CartButton } from "../src/components/CartButton";
 import { IProduct } from "../src/context/CartContext";
 import { useCart } from "../src/hooks/useCart";

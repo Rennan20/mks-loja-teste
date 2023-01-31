@@ -1,3 +1,4 @@
+import React from "react";
 import { Cart } from "../Cart";
 import { HeaderContainer, NavBar } from "./styles";
 

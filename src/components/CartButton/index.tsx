@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Handbag } from "phosphor-react";
 import { ButtonContainer } from "./styles";
 
